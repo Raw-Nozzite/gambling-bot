@@ -9,8 +9,6 @@ import time
 import threading
 
 # Initialise database
-if not os.path.exists("player_data.db"):
-    open("player_data.db",mode="w").close()
 database = sqlite3.connect("player_data.db")
 database.execute("CREATE TABLE IF NOT EXISTS users (discordID integer, balance integer)")
 
